@@ -12,7 +12,7 @@
 </script>
 <script type="text/javascript">
   $(window).on('load', function() {
-    var labels = ['semanas', 'dias', 'horas', 'minutos', 'segundos'],
+    var labels = ['mês', 'dias', 'horas', 'minutos', 'segundos'],
       nextYear = (new Date().getFullYear() + 1) + '/01/01',
       template = _.template($('#main-example-template').html()),
       currDate = '00:00:00:00:00',
@@ -47,9 +47,11 @@
         label: label
       }));
     });
+
+    var fiveSeconds = new Date('March 14, 2018 9:39:00').getTime();
     // Starts the countdown
-    $example.countdown(nextYear, function(event) {
-      var newDate = event.strftime('%w:%d:%H:%M:%S'),
+    $example.countdown(fiveSeconds, { elapse: true}).on('update.countdown', function(event) {
+      var newDate = event.strftime('%m:%n:%H:%M:%S'),
         data;
       if (newDate !== nextDate) {
         currDate = nextDate;

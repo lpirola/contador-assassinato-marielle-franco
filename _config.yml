@@ -1,7 +1,7 @@
 name:           Contador Assassinato Marielle Franco
 nickname:       contador-assassinato-marielle-franco
 plugin_version: 2.2.0
-baseurl:        http://lpirola.github.io/contador-assassinato-marielle-franco
+baseurl:        https://lpirola.github.io/contador-assassinato-marielle-franco
 highlight:      true
 markdown:       kramdown
 redcarpet:
