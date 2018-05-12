@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{page.title}} - jQuery.countdown</title>
+  <title>{{page.title}}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
@@ -16,52 +16,9 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
   <script src="//cdn.rawgit.com/hilios/jQuery.countdown/{{site.plugin_version}}/dist/jquery.countdown.min.js"></script>
 </head>
-<body{% if page.toc %} data-spy="scroll" data-target=".toc"{% endif %}>
-<header>
-  <div class="container">
-    <div class="pure-g-r">
-      <div class="pure-u-1-5">
-        <a href="{{site.baseurl}}/" class="brand">jQuery.countdown</a>
-        <div class="nav-toggle pure-hidden-tablet pure-hidden-desktop">
-          <button class="pure-button">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-      </div>
-      <div class="pure-u-4-5">
-        <nav class="pure-menu pure-menu-horizontal pure-menu-open">
-          {% include main-menu.html %}
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
+<body style="font-size:125%; background-color: #333;">
 <main>
   {{content}}
 </main>
-<footer>
-  <div class="container">
-    <p>
-      {% include gh-buttons.html %}
-    </p>
-    <p>
-      The Final Countdown (jQuery.countdown) was created and is maintained by <a href="https://github.com/hilios" target="_blank">@hilios</a>
-      <br/>
-      This is a free software is licensed under the <a href="https://github.com/hilios/jQuery.countdown/blob/master/LICENSE.md" target="_blank">MIT License</a>
-    </p>
-    <nav>
-      {% include main-menu.html %}
-    </nav>
-  </div>
-</footer>
-{% include gh-ribbon.html %}
-{% include ga.html %}
-<script type="text/javascript">
-$(function() {
-  $('.nav-toggle > button').click(function(event) {
-    $('header nav').toggleClass('active');
-  });
-});
-</script>
 </body>
 </html>
